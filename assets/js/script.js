@@ -49,8 +49,22 @@ function checkAnswer() {
 
 }
 
+/**
+ * Gets the operands (the numbers) and the operator (plus, minus etc)
+ * directly from the dom, and returns the correct answer.
+ */
 function calculateCorrectAnswer() {
+const operand1 = parseInt(document.getElementById('operand1').innerText);
+const operand2 = parseInt(document.getElementById('operand2').innerText);
+const operator = document.getElementById('operator').innerText;
 
+if (operator === '+') {
+    return [operand1 + operand2, 'addition'];
+    operand1 - operand2;
+} else {
+    alert(`Unimplemented operator ${operator}`);
+    throw `Unimplemented operator ${operator}. Aborting!`;
+}
 }
 
 function incrementScore() {
